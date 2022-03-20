@@ -4,3 +4,8 @@ def is_all_upper(text: str) -> bool:
     return text.upper() == text
 
 print( is_all_upper('fdfd f'))
+
+
+words = ['aps','boobs']
+
+print(words.index('boobs'))

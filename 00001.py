@@ -9,3 +9,7 @@ print(i)
 # лучшее решение
 def beginning_zeros(number: str) -> int:
     return len(number) - len(number.lstrip('0'))
+
+# найти повторяющиеся строки в списке строк
+def most_frequent(data):
+    return max(set(data), key=data.count)

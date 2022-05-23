@@ -18,17 +18,50 @@
 9. Найти максимальный элемент среди минимальных элементов столбцов матрицы.
 '''
 
-
-#1
+import random
+# 1
 def multiple():
-    a = [x for x in range(2,100)]
+    a = [x for x in range(2, 100)]
     res = {}
 
     for i in a:
-        for ii in range(2,10):
-            if i %ii ==0:
-                res.setdefault(ii,[]).append(i)
+        for ii in range(2, 10):
+            if i % ii == 0:
+                res.setdefault(ii, []).append(i)
 
     return res
 
-print(multiple())
+
+# 2
+def even_store(nums: list):
+    if type(nums) != list or len(nums) < 2:
+        return 'Ошибка значений'
+    else:
+        res = []
+        for ind, elm in enumerate(nums):
+            if elm % 2 == 0:
+                res.append(ind)
+        return res
+
+
+#3
+def change_places():
+    a = []
+    for x in range(10):
+        a.append(random.randint(0,10))
+    print(a)
+    a_max = a.index(max(a))
+    a_min = a.index(min(a))
+    a[a_max],a[a_min] = a[a_min],a[a_max]
+
+    return a
+
+# 1
+# print(multiple())
+# 2
+#print(even_store([2, 3, 6, 7, 9, 10]))
+#print(even_store(2))
+
+
+#3
+print(change_places())
